@@ -2,21 +2,21 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "build"),
     clean: true,
   },
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['css-loader'],
+        test: /\.css$/, // Match CSS files
+        use: ["style-loader", "css-loader"], // Use style-loader to inject CSS into the DOM and css-loader to handle CSS imports
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
   devServer: {
     historyApiFallback: true,
   },
