@@ -1,5 +1,3 @@
-import { padawanEditor } from './texteditor';
-
-
-customElements.define("padawan-editor", padawanEditor);
+import  "./components/padawan-editor.js";
+ 
 

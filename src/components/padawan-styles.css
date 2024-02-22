@@ -1,0 +1,58 @@
+body {
+  overflow: auto;
+  background-color: white;
+}
+
+:root {
+  --grey: grey;
+  --white: #ecf0f1;
+}
+
+.text-editor-container {
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-editor {
+  margin-top: 10px;
+  border: 1px solid black;
+  background-color: var(--grey);
+  width: 35vw;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+}
+
+.header {
+  background-color: var(--white);
+  padding: 5px;
+}
+
+.header .btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.content {
+  min-height: 200px;
+  border: 1px solid var(--white);
+  border-top: 0px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+img.uneditable {
+  pointer-events: none;
+}
+
+#delete-image {
+  margin-left: 50%;
+  margin-right: 50%;
+}
